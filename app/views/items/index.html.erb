@@ -1,4 +1,4 @@
-<%= render "shared/header" %>
+<%# <%= render "shared/header" %> %>
 <div class='main'>
 
   <%# 画面上部の「帽子屋 OORURI」帯部分 %>
@@ -13,7 +13,7 @@
   <%# /画面上部の「帽子屋 OORURI」帯部分  %>
 
   <%# プロフィール部分 %>
-  <div class='select-reason-contents'>
+  <div class='profile-contents'>
     <h2 class='title'>
       『帽子屋 OORURI』の紹介
     </h2>
@@ -39,7 +39,7 @@
   <%# /プロフィール部分 %>
 
   <%# 新着情報部分 %>
-  <div class="news-content">
+  <div class="news-contents">
     <h2 class="heading-name">新着情報</h2>
     <ul class="messages">
       <li class="message">
@@ -66,42 +66,53 @@
   </div>
   <%# /新着情報部分 %>
 
-  <%# FURIMAの特徴 %>
+  <%# 自分に似合う帽子を選ぼう部分 %>
   <div class='feature-contents'>
     <h2 class='title'>
       自分に似合う帽子を選ぼう。
     </h2>
+    <h3 class='how-to-select'>
+      帽子の選び方
+    </h3>
+    <p class='how-to-select-text'>
+      帽子を選ぶ基準は「顔の形」、「頭のサイズ」、「服装のコーディネート」、「全体のシルエット」、
+      「ご自身のこだわり」など色々な要素があります。下記STEPは一つの切り口であって、全てではありません。
+      ooruriでは皆さまのご要望をセミオーダーで承りますので、お気軽にお問い合わせください。
+    </p>
     <ul class='feature-lists'>
       <li class='list'>
         <%= image_tag "", class:"list-pict" %>
         <h3 class='feature-list-text'>
-          簡単に売り買いできる
+          <span class='step'>STEP.1</span>
+          顔の形をチェックしよう
         </h3>
         <p class='feature-list-description'>
-          スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+          一般的な「顔の形」と「似合う帽子」の組み合わせです。          
         </p>
       </li>
       <li class='list'>
-        <%= image_tag "furima-intro05.png", class:"list-pict" %>
+        <%= image_tag "", class:"list-pict" %>
         <h3 class='feature-list-text'>
-          売上金は即日振込みに対応
+          <span class='step'>STEP.2</span>
+          自分に合ったサイズをチェックしよう
         </h3>
         <p class='feature-list-description'>
-          午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします。
+          帽子が似合うためにはサイズが重要です。
         </p>
       </li>
       <li class='list'>
-        <%= image_tag "furima-intro06.png", class:"list-pict" %>
+        <%= image_tag "", class:"list-pict" %>
         <h3 class='feature-list-text'>
-          様々な支払いに対応
+          <span class='step'>STEP.3</span>
+          服装にあった帽子を選ぼう
         </h3>
         <p class='feature-list-description'>
-          お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+          トータルコーディネートを意識しましょう。
         </p>
       </li>
     </ul>
   </div>
-  <%# /FURIMAの特徴 %>
+  <%# /自分に似合う帽子を選ぼう部分 %>
 
   <%# PRUDUCTS部分 %>
   <div class='item-contents'>
@@ -137,4 +148,4 @@
   </div>
   <%# /PRODUCTS部分 %>
 </div>
-<%= render "shared/footer" %>
+<%# <%= render "shared/footer" %> %>
