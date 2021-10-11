@@ -1,0 +1,140 @@
+<%= render "shared/header" %>
+<div class='main'>
+
+  <%# 画面上部の「帽子屋 OORURI」帯部分 %>
+  <div class='title-contents'>
+    <h2 class='service-title'>
+      帽子屋 OORURI
+    </h2>
+    <p class='service-explain'>
+      Make you more Quetzal
+    </p>
+  </div>
+  <%# /画面上部の「帽子屋 OORURI」帯部分  %>
+
+  <%# プロフィール部分 %>
+  <div class='select-reason-contents'>
+    <h2 class='title'>
+      『帽子屋 OORURI』の紹介
+    </h2>
+    <ul class='profile-lists'>
+      <li class='list'>
+        <h3 class='profile-list-text'>         
+          <span class='excellent-happy-text'>「より素敵によりハッピーに」</span>
+          <p class='profile-explain'>
+            をテーマに様々なコンテンツを発信していきます。
+          </p>
+          <p class='profile-explain'>
+            ブランド名の
+          </p>
+          <span class='ooruri-text'>OORURI</span>
+            <p class='profile-explain'>
+              の由来は、オオルリという鳥が頭に素敵な帽子を被っている様に見えて、こんな風に被った人がより素敵に見える帽子を発信していきたいという思いから付けました。
+              一点ずつ丁寧に手作りしています。
+            </p>
+        </h3>
+      </li>
+    </ul>
+  </div>
+  <%# /プロフィール部分 %>
+
+  <%# 新着情報部分 %>
+  <div class="news-content">
+    <h2 class="heading-name">新着情報</h2>
+    <ul class="messages">
+      <li class="message">
+        <div class="message-date">2021/10/14</div>
+        <div>【記事】ooruri風 秋・冬帽子の着こなし</div>
+      </li>
+      <li class="message">
+        <div class="message-date">2021/10/13</div>
+        <div>【イベント】見える景色が変わる!?帽子2.0</div>
+      </li>
+      <li class="message">
+        <div class="message-date">2021/10/12</div>
+        <div>【おしらせ】まもなく秋・冬 新作りリース</div>
+      </li>
+      <li class="message">
+        <div class="message-date">2021/10/11</div>
+        <div>【記事】あったらいいなをカタチに</div>
+      </li>
+      <li class="message">
+        <div class="message-date">2021/10/8</div>
+        <div>【イベント】第一回ワークショップ開催します</div>
+      </li>
+    </ul>
+  </div>
+  <%# /新着情報部分 %>
+
+  <%# FURIMAの特徴 %>
+  <div class='feature-contents'>
+    <h2 class='title'>
+      自分に似合う帽子を選ぼう。
+    </h2>
+    <ul class='feature-lists'>
+      <li class='list'>
+        <%= image_tag "", class:"list-pict" %>
+        <h3 class='feature-list-text'>
+          簡単に売り買いできる
+        </h3>
+        <p class='feature-list-description'>
+          スマホひとつで、いつでもどこでも簡単に出品・購入が可能！
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "furima-intro05.png", class:"list-pict" %>
+        <h3 class='feature-list-text'>
+          売上金は即日振込みに対応
+        </h3>
+        <p class='feature-list-description'>
+          午前9時までに振込を依頼いただければ、翌日に指定の口座に入金いたします。
+        </p>
+      </li>
+      <li class='list'>
+        <%= image_tag "furima-intro06.png", class:"list-pict" %>
+        <h3 class='feature-list-text'>
+          様々な支払いに対応
+        </h3>
+        <p class='feature-list-description'>
+          お支払いは、クレジットカードだけでなく、ポイントや売上金など多彩な方法があります。
+        </p>
+      </li>
+    </ul>
+  </div>
+  <%# /FURIMAの特徴 %>
+
+  <%# PRUDUCTS部分 %>
+  <div class='item-contents'>
+    <h2 class='title'>PRODUCTS</h2>
+    <ul class='item-lists'>
+      <% @items.each do |item|%>
+      <li class='list'>
+        <%= link_to item_path(item.id), method: :get do %>
+        <div class='item-img-content'>
+          <%= image_tag item.image, class: "item-img" if item.image.attached? %>
+        </div>
+        <div class='item-info'>
+          <h3 class='item-name'>
+            <%= item.name %>
+          </h3>
+          <div class='item-price'>
+            <span><%= item.price %>円<br><%= item.delivery_charge.name %></span>
+            <div class='star-btn'>
+              <%= image_tag "star.png", class:"star-icon" %>
+              <span class='star-count'>0</span>
+            </div>
+            <% if item.purchase_history.present? %>
+            <div class='sold-out'>
+              <span>Sold Out!!</span>
+            </div>
+            <% end %>
+          </div>
+        </div>
+        <% end %>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+  <%# /PRODUCTS部分 %>
+</div>
+<%= render "shared/footer" %>
