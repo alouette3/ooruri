@@ -36,18 +36,18 @@ a {
 
 /* プロフィール部分 */
 .profile-contents {
-  padding: 5vh 15vw;
+  padding: 5vh 20vw;
 }
 
-// .select-reason-contents>.title {
-//   text-align: center;
-//   font-size: 3.5vh;
-//   font-weight: bold;
-//   margin-bottom: 5vh;
-//   position: relative;
-// }
+.profile-contents>.title {
+  text-align: center;
+  font-size: 3.5vh;
+  font-weight: bold;
+  margin-bottom: 5vh;
+  position: relative;
+}
 
-// .select-reason-contents>.title::after {
+// .profile-contents>.title::after {
 //   content: '';
 //   width: 70px;
 //   height: 4px;
@@ -65,7 +65,7 @@ a {
 }
 
 .profile-lists>.list {
-  width: 33vh;
+  width: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -103,6 +103,10 @@ a {
 .profile-explain {
   font-size: 18px;
   margin-top: 20px;
+}
+
+.ooruri-text {
+  font-weight: bold;
 }
 
 /* プロフィール部分 */
@@ -158,13 +162,14 @@ a {
 
 .heading-name {
   text-align: center;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #3ccace;
   width: 200px;
   margin: 40px auto;
+  font-size: 30px;
 }
 
 .messages {
-  width: 50vw;
+  width: 40vw;
   margin: 0 auto;
 }
 
@@ -193,27 +198,29 @@ a {
   position: relative;
 }
 
-.feature-contents>.title::after {
-  content: '';
-  width: 70px;
-  height: 4px;
-  background-color: #3ccace;
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-}
+// .feature-contents>.title::after {
+//   content: '';
+//   width: 70px;
+//   height: 4px;
+//   background-color: #3ccace;
+//   position: absolute;
+//   bottom: -10px;
+//   left: 50%;
+//   transform: translateX(-50%);
+// }
 
 .how-to-select {
   text-align: center;
-  border-bottom: 1px solid red;
+  border-bottom: 1px solid #3ccace;
   width: 200px;
   margin: 40px auto;
+  font-size: 30px;
 }
 
 .how-to-select-text {
   font-size: 18px;
   margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .feature-lists {

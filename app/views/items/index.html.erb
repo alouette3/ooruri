@@ -21,18 +21,16 @@
     <ul class='profile-lists'>
       <li class='list'>
         <h3 class='profile-list-text'>         
-          <span class='excellent-happy-text'>「より素敵によりハッピーに」</span>
-          <p class='profile-explain'>
-            をテーマに様々なコンテンツを発信していきます。
-          </p>
-          <p class='profile-explain'>
+          <span class='excellent-happy-text'>「より素敵によりハッピーに」</span>をテーマに様々なコンテンツを発信していきます。
+          <%# <p class='profile-explain'> %>
+            
+          <%# </p> %>
+        </h3>
+        <h3 class='profile-explain'>
             ブランド名の
-          </p>
           <span class='ooruri-text'>OORURI</span>
-            <p class='profile-explain'>
-              の由来は、オオルリという鳥が頭に素敵な帽子を被っている様に見えて、こんな風に被った人がより素敵に見える帽子を発信していきたいという思いから付けました。
-              一点ずつ丁寧に手作りしています。
-            </p>
+            の由来は、オオルリという鳥が頭に素敵な帽子を被っている様に見えて、こんな風に被った人がより素敵に見える帽子を発信していきたいという思いから付けました。
+            一点ずつ丁寧に手作りしています。
         </h3>
       </li>
     </ul>
@@ -60,8 +58,8 @@
         <div>【記事】あったらいいなをカタチに</div>
       </li>
       <li class="message">
-        <div class="message-date">2021/10/8</div>
-        <div>【イベント】第一回ワークショップ開催します</div>
+        <div class="message-date">2021/10/8 </div>
+        <div>&nbsp;&nbsp;【イベント】第一回ワークショップ開催します</div>
       </li>
     </ul>
   </div>
@@ -70,7 +68,7 @@
   <%# 自分に似合う帽子を選ぼう部分 %>
   <div class='feature-contents'>
     <h2 class='title'>
-      自分に似合う帽子を選ぼう。
+      自分に似合う帽子を選ぼう
     </h2>
     <h3 class='how-to-select'>
       帽子の選び方
@@ -130,16 +128,16 @@
             <%= item.name %>
           </h3>
           <div class='item-price'>
-            <span><%= item.price %>円<br><%= item.delivery_charge.name %></span>
+            <span><%= item.price %>円<br><%= item.delivery_charge %></span>
             <div class='star-btn'>
               <%= image_tag "star.png", class:"star-icon" %>
               <span class='star-count'>0</span>
             </div>
-            <% if item.purchase_history.present? %>
-            <div class='sold-out'>
-              <span>Sold Out!!</span>
-            </div>
-            <% end %>
+            <%# <% if item.purchase_history.present? %>
+            <%# <div class='sold-out'> %>
+              <%# <span>Sold Out!!</span> %>
+            <%# </div> %>
+            <%# <% end %>
           </div>
         </div>
         <% end %>
