@@ -1,8 +1,9 @@
-<%# <%= render "shared/header" %> %>
+<%= render "shared/header" %>
 <div class='main'>
 
   <%# 画面上部の「帽子屋 OORURI」帯部分 %>
   <div class='title-contents'>
+    <%# <%= link_to image_tag("app/assets/images/ooruri-header01.png", class:"apple-btn"), "#" %>
     <h2 class='service-title'>
       帽子屋 OORURI
     </h2>
@@ -148,4 +149,8 @@
   </div>
   <%# /PRODUCTS部分 %>
 </div>
-<%# <%= render "shared/footer" %> %>
+<%= link_to(new_item_path, class: 'purchase-btn') do %>
+  <span class='purchase-btn-text'>出品する</span>
+  <%= image_tag 'ooruri-display.png' , size: '200x60' ,class: "purchase-btn-icon" %>
+<% end %>
+<%= render "shared/footer" %>

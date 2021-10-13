@@ -9,7 +9,8 @@ a {
 /* 画面上部の「帽子屋 OORURI」帯部分 */
 .title-contents {
   width: 100vw;
-  background-image: image-url('ooruri-header01.png');
+  height: 10vw;
+  background-image: image-url('ooruri-header01.JPG');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
@@ -18,12 +19,12 @@ a {
   align-items: flex-start;
   justify-content: center;
   padding: 5vh 15vw;
-  color: rgb(25, 6, 56);
+  color: #fff;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
 }
 
 .service-title {
-  font-size: 8vh;
+  font-size: 4vh;
 }
 
 .service-explain {
