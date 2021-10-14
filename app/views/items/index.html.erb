@@ -88,6 +88,7 @@
         <p class='feature-list-description'>
           一般的な「顔の形」と「似合う帽子」の組み合わせです。          
         </p>
+        <%= image_tag 'face-shape.png' , size: '400x300' ,class: "face-shape" %>
       </li>
       <li class='list'>
         <%= image_tag "", class:"list-pict" %>
@@ -110,7 +111,20 @@
         </p>
       </li>
     </ul>
-  </div>
+    <%# <%= f.label :name_eq, '商品名：' %>
+    <%# <%= f.collection_select :name_eq, @item_name, :name, :name, include_blank: '指定なし' %>
+    <%# <br> %>
+    <%# <%= f.label :size_eq, 'サイズ：' %>
+    <%# <%= f.collection_select :size_eq, @item_size, :size, :size, include_blank: '指定なし'%>
+    <%# <br> %>
+    <%# <%= f.label :face_shape_eq, '顔の形：' %>
+    <%# <%= f.collection_select :face_shape_eq, @item_face_shape, :face_shape, :face_shape, include_blank: '指定なし'%>
+    <%# <br> %>
+    <%# <%= f.label :coordinate_eq, 'コーディネート：' %>
+    <%# <%= f.collection_select :coordinate_eq, @item_coordinate, :coordinate, :coordinate, include_blank: '指定なし' %>
+    <%# <br> %>
+    <%# <%= f.submit '検索' %>
+  <%# </div> %>
   <%# /自分に似合う帽子を選ぼう部分 %>
 
   <%# PRUDUCTS部分 %>

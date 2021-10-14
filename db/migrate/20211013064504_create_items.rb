@@ -10,6 +10,10 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :delivery_day, null:false
       t.string :delivery_charge, null:false
       t.references :user, foreign_key: true
+      t.string :face_shape
+      t.integer :size
+      t.string :coordinate 
+
       t.timestamps
     end
   end
