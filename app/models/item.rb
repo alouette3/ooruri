@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-  extend ActiveHash::Associations::ActiveRecordExtensions
+  # extend ActiveHash::Associations::ActiveRecordExtensions
   has_one_attached :image
   belongs_to :user
   # belongs_to :primary_category
