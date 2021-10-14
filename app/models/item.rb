@@ -4,7 +4,7 @@ class Item < ApplicationRecord
   belongs_to :user
   # belongs_to :primary_category
   # belongs_to :secondary_category
-  belongs_to :category
+  # belongs_to :category
 
   validates :price, :delivery_area, :delivery_day, :delivery_charge, :image, presence: true
   validates :price, numericality: { with: /\A[0-9]+\z/, message: "は半角数字を使用して下さい" }
